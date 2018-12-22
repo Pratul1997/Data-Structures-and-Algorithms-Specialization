@@ -3,7 +3,7 @@
 ```
 # python3
 input = [int(i) for i in input().split()]
-print input[0] + input[1]
+print (input[0] + input[1])
 ```
 
 
@@ -25,5 +25,5 @@ for y in range(num):
     if lar2 < arr[y] and indexlar1 != y:
         lar2 = arr[y]
 
-print lar1 * lar2
+print (lar1 * lar2)
 ```
