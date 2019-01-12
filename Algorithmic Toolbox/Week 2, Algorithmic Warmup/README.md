@@ -33,7 +33,26 @@ else:
     print (num)
 ```
 ## 3: Greatest Common Divisor
+```
+# python3
+num1 , num2 = [int(i) for i in input().split()]
+if num2 > num1:
+    (num1, num2) = (num2, num1)
+while num2 != 0:
+    (num1, num2) = (num2, num1 % num2)
+print (num1)
+```
 ## 4: Least Common Multiple
+```
+# python3
+num1 , num2 = [int(i) for i in input().split()]
+product = num1 * num2
+if num2 > num1:
+    (num1, num2) = (num2, num1)
+while num2 != 0:
+    (num1, num2) = (num2, num1 % num2)
+print (int(product // num1))
+```
 ## 5: Fibonacci Number Again
 ```
 # python3
