@@ -1,4 +1,4 @@
-# Solution
+# Solutions
 ## 1: Fibonacci Number
 ```
 # python3
@@ -167,3 +167,43 @@ else:
     print (last_num2 + 10 - last_num1)
 ```
 ## 8: Last Digit Of The Sum Of Squares Of Fibonacci Numbers
+```
+# python3
+def lastsum(n):
+    a0 = 0
+    a1 = 1
+    a2 = 0
+    m = 10
+    if n > 0:
+        count = 0
+        while True:
+            a2 = a1 + a0
+            a0 = a1
+            a1 = a2
+            count = count + 1
+            if a0 % m == 0 and a2 % m == 1:
+                break
+        n = n % count
+        a0 = 0
+        a1 = 1
+        last = 0
+        if n >= 2:
+            for x in range(n - 1):
+                last = a1 + a0
+                a0 = a1
+                a1 = last
+        elif n == 1:
+            last = 1
+        elif n == 0:
+            last = 0
+
+        return last % m
+num = int(input())
+if(num==0):
+    print(0)
+elif(num==1):
+    print(1)
+else:
+    prod = (lastsum(num) + lastsum(num - 1)) * lastsum(num)
+    print (prod % 10)
+```
