@@ -50,3 +50,27 @@ for x in range(n):
     maxprofit += ad[x] * cost[x]
 print(maxprofit)
 ```
+
+## 4: Collecting Signatures
+
+
+## 5: Maximum Number of Prizes
+```
+# python3
+number = int(input())
+arr = []
+i = 1
+while True:
+    if number - i >= 0:
+        number -= i
+        arr.append(i)
+        i += 1
+    else:
+        arr[len(arr) - 1] += number
+        break
+print(len(arr))
+for x in range(len(arr)):
+    print(arr[x], end=' ')
+```
+
+## 6: Maximum Salary
