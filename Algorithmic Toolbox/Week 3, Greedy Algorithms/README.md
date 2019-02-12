@@ -2,6 +2,7 @@
 
 ## 1: Money Change
 ```
+# python3
 m = int(input())
 count = 0
 count += int(m // 10)
@@ -74,3 +75,23 @@ for x in range(len(arr)):
 ```
 
 ## 6: Maximum Salary
+```
+# python3
+n = int(input())
+arr = input().split()
+out = ''
+
+def IsGreaterOrEqual(digit, max_digit):
+    return int(digit + max_digit) >= int(max_digit + digit)
+
+for x in range(len(arr)):
+    mval = arr[0]
+    index = -1
+    for y in range(len(arr)):
+        if IsGreaterOrEqual(arr[y], mval):
+            mval = arr[y]
+            index = y
+    arr[index] = '0'
+    out += mval
+print(int(out))
+```
