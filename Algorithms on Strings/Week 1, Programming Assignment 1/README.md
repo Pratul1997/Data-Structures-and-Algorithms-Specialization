@@ -123,6 +123,9 @@ print (' '.join(map(str, ans)))
 ```
 
 ## 3: Extend TrieMatching 
+```
+Same as Implement TrieMatching
+```
 
 ## 4: Construct the Suffix Tree of a String 
 
