@@ -49,7 +49,32 @@ print(out)
 ```
 
 ## 3: Edit Distance
+```
+# python3
+text_a=input()
+text_b=input()
 
+arr = [[0 for i in range(len(text_a) + 1)] for j in range(len(text_b)+ 1)]
+
+for x in range(len(text_b) + 1):
+    for y in range(len(text_a) + 1):
+        if x == 0:
+            arr[x][y] = y
+        elif y == 0:
+            arr[x][y] = x
+        else:
+            ins = arr[x][y - 1] + 1
+            de = arr[x - 1][y] + 1
+            mt = arr[x - 1][y - 1]
+            mis = arr[x - 1][y - 1] + 1
+
+            if text_b[x - 1] == text_a[y - 1]:
+                arr[x][y] = min(ins, de, mt)
+            else:
+                arr[x][y] = min(ins, de, mis)
+    
+print(arr[-1][-1])
+```
 
 ## 4: Longest Common Subsequence of Two Sequences
 ```
